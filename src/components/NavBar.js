@@ -3,8 +3,39 @@ import CustomBtn from './CustomBtn'
 import logo from '../logo.svg'
 import logoMobile from '../logoMobile.svg'
 import {Toolbar, Typography} from '@material-ui/core'
-import {makeStyles} from ";@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 
+const styles = makeStyles({
+    bar:{
+        paddingTop: "1.15rem",
+        backgroundColor: "#fff",
+        ['@media (max-width:780px)']: {
+            flexDirection: "column"
+        }
+    },
+    logo: {
+        width: "15%",
+        ['@media (max-width:780px)']: {
+            display: "none"
+        }
+    },
+    logoMobile: {
+        width: "100%",
+        display: "none",
+        ['@media (max-width:780px)']: {
+            diaplay: "inline-block"
+        }
+    },
+    menuItem: {
+        cursor: "pointer",
+        flexGrow: 1,
+        "&:hover": {
+            color: "#4f25c8"
+        },
+        ['@media (max-width:780px']: {
+            paddingBottom: "1rem" }
+        }
+})
 
 export default function NavBar() {
     const classes = styles()
